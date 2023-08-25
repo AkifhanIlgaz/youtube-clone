@@ -1,11 +1,11 @@
 import { initializeApp } from 'firebase/app';
 import {
+  GoogleAuthProvider,
   User,
   getAuth,
   onAuthStateChanged,
   signInWithPopup,
 } from 'firebase/auth';
-import { GoogleAuthProvider } from 'firebase/auth/cordova';
 import firebaseConfig from './firebaseConfig';
 
 const app = initializeApp(firebaseConfig);
