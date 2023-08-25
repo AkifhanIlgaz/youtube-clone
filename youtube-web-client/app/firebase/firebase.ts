@@ -6,13 +6,7 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 import { GoogleAuthProvider } from 'firebase/auth/cordova';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyBRxrWwu84Eu8wh6SfOS6uR-7bhT5caOus',
-  authDomain: 'clone-ac080.firebaseapp.com',
-  projectId: 'clone-ac080',
-  appId: '1:46774666659:web:60fc99004a3cf85f4d8616',
-};
+import firebaseConfig from './firebaseConfig';
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
