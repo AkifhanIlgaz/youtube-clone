@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { onAuthStateChangedHelper } from '../firebase/firebase';
 import styles from './navbar.module.css';
 import SignIn from './sign-in';
+import Upload from './upload';
 
 export default function Navbar() {
   const [user, setUser] = useState<User | null>(null);
@@ -29,6 +30,7 @@ export default function Navbar() {
           height={20}
         />
       </Link>
+      {user && <Upload />}
       <SignIn user={user} />
     </nav>
   );
