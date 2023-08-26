@@ -6,9 +6,12 @@ import {
   onAuthStateChanged,
   signInWithPopup,
 } from 'firebase/auth';
+import { getFunctions } from 'firebase/functions';
 import firebaseConfig from './firebaseConfig';
 
 const app = initializeApp(firebaseConfig);
+
+export const functions = getFunctions(app);
 const auth = getAuth(app);
 
 /**
